@@ -20,7 +20,7 @@ app.post('/ussd', (req, res) => {
 
   // Main USSD menu
   if (text === '') {
-    response = `CON Welcome to the Donation Service. Choose an option:
+    response = `CON Welcome to Feed Kenya. Choose an option:
 1. Donate
 2. Receive
 3. Quit`;
@@ -37,7 +37,7 @@ app.post('/ussd', (req, res) => {
       let name = textArray[1];
       let donation = textArray[2];
       let location = textArray[3];
-      response = `END Thank you ${name} for donating ${donation} at ${location}. We appreciate your generosity.`;
+      response = `END Thank you ${name} for donating ${donation}. We appreciate your generosity. We will reach out soon`;
     }
   } else if (text === '2') {
     // Receiving flow
